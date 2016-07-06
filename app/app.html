@@ -1,0 +1,14 @@
+<header [style.color]="foreground">
+    <h1>Power 4</h1>
+    <h2>{{number}} leds</h2>
+    <nav-app></nav-app>
+</header>
+<p><img [src]="img"></p>
+<button (click)="switchLed()">Switch led</button>
+<button (click)="getList()">get list</button>
+<p>{{users}}</p>
+<table>
+    <tr *ngFor="let line of matrix">
+        <td *ngFor="let column of line">{{column.name[status]}}</td>
+    </tr>
+</table>

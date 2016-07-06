@@ -1,0 +1,6 @@
+<h2>Matrix Leds</h2>
+<p><i>Make choice to start player</i></p>
+<div *ngFor="let choice of choices" (click)="selectedMatrix(matrix)">
+    {{choice.name}}
+</div>
+<matrix-detail *ngIf="selectedMatrix" [matrix]="selectedMatrix"></matrix-detail>
